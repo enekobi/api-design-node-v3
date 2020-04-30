@@ -10,7 +10,7 @@ export const app = express()
 
 app.disable('x-powered-by')
 
-app.use(ItemRouter)
+app.use('/api/item', ItemRouter)
 
 app.use(cors())
 app.use(json())

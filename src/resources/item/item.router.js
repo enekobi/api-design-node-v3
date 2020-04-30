@@ -1,6 +1,8 @@
 import { Router } from 'express'
 
-const noop = async (req, res) => {}
+const noop = async (req, res) => {
+  res.send('ok')
+}
 
 const router = Router()
 
