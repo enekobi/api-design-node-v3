@@ -9,10 +9,10 @@ const itemSchema = new mongoose.Schema(
       maxlength: 50
     },
     status: {
-      default: 'active',
       required: true,
       type: String,
-      enum: ['active', 'complete', 'pastdue']
+      enum: ['active', 'complete', 'pastdue'],
+      default: 'active'
     },
     notes: String,
     due: Date,
