@@ -211,7 +211,8 @@ describe('Authentication:', () => {
       const next = () => {}
       await protect(req, {}, next)
       expect(req.user._id.toString()).toBe(user._id.toString())
-      expect(req.user).not.toHaveProperty('password')
+      // expect(req.user).not.toHaveProperty('password')
+      expect(req.user.password).toBeUndefined()
     })
   })
 })
